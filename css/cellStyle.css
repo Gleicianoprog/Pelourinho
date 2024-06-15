@@ -1,0 +1,83 @@
+
+@media(max-width : 600px){
+    .pagina{
+        grid-template-rows: 300px auto auto auto auto 475px;
+    }
+    .socialMedia{
+        display: none;
+    }
+    .frase{
+        display: none;
+    }
+    .menu-cell{
+        font-size: 20px;
+    }
+    #inicio{
+        height: 300px;
+    }
+    .subtitulo{
+        font-size: 25px;
+        padding: 26px 0;
+    }
+    .mapa{
+        width: 90vw;
+        height: 300px;
+    
+    }
+    .textoPrincipal{
+        font-size: 16px;
+        width: 100vw;
+        padding-bottom: 0;
+    }
+    .anuncios{
+        padding: 0;
+    }
+    .checklist{
+        max-width: 100%;
+        padding: 26px 0;
+    }
+    .checklist li{
+        margin-left: 15px;
+        padding: 5px;
+    }
+    .img-restaurante{
+        width: 80vw;
+    }
+    
+    .frase-restaurante{
+        padding: 0;
+        font-size: 30px;
+    }
+    .img-bangalos{
+        height: 300px;
+    }
+    .carrossel-restaurante{
+        width: 100%;
+    }
+    #bangalos{
+        padding-bottom: 100px;
+    }
+    .texto-bangalos{
+        font-size: 16px;
+        padding: 0 15px;
+        padding-bottom: 26px;
+    }
+    .informacao-bangalos ul{
+        margin-top: 26px;
+        align-items: start;
+        font-size: 20px;
+        flex-direction: column-reverse;
+        row-gap: 10px;
+        flex-wrap: nowrap;
+    }
+    .rodape{
+        padding: 0;
+    }
+    .rodape div{
+        width: 100%;
+        background-color: #eb489fd3;
+    }
+    .rodape div :not(:first-child){
+        font-size: 20px;
+    }
+}

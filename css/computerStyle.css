@@ -1,0 +1,325 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+.pagina{
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    grid-template-rows: 100vh 200px 100vh 200px 100vh 200px 100vh auto;  
+    grid-template-columns: 50% 25% 25%;
+    grid-template-areas: 
+    'inicio inicio inicio'
+    'subtitulo1 subtitulo1 subtitulo1'
+    'sobre sobre anuncios'
+    'subtitulo2 subtitulo2 subtitulo2'
+    'restaurante restaurante restaurante'
+    'subtitulo3 subtitulo3 subtitulo3'
+    'bangalos bangalos bangalos'
+    'textobangalo textobangalo textobangalo'
+    'rodape rodape rodape'
+    ;
+}
+.cabecalho{
+    position: fixed;
+    display: flex;
+    height: 115px;
+    width: 100%;
+    justify-content: space-between;
+    z-index: 3;
+}
+.socialMedia{
+    z-index: 1;
+    height: 100vh;
+    position: fixed;
+    left: 40px;
+    display: flex;
+    align-items: center;
+}
+.socialMedia li {
+    margin-bottom: 50px;
+    text-align: center;
+}
+.socialMedia li a{
+    text-decoration: none;
+}
+.socialMedia img{
+    height: 25px;
+}
+.menu-pc{
+    margin-right: 30px;
+    width: 50%;
+}
+.menu-pc ul{
+    height: 100%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.menu-pc ul a{
+    text-decoration: none;
+    font-size: 25px;
+    color: #FEFEFE;
+}
+.menu-pc ul a:hover{
+    transition: 0.3s;
+    color: black;
+    display: block;
+    margin-bottom: 5px;
+}
+.menu-cell{
+    display: none;
+}
+.logo a{
+    height: 100%;
+    width: 100%;
+}
+.logo{
+    margin-left: 20px;
+}
+.logo img{
+    height: 100%;
+    padding: 5px 0; 
+}
+#inicio{
+    z-index: 2;
+    grid-area: inicio;
+    background: url(/assets/BackgroundInicio1.webp);
+    background-size: cover;
+}
+.botoes{
+    z-index: 1;
+    position: relative;
+    max-width: 100%;
+    top: calc(50% - 40px);
+    display: flex;
+    padding: 0 45px;
+    justify-content: space-between;
+}
+.botoes :hover{
+    cursor: pointer;
+}
+.botao-esquerdo{
+    padding-left: 25px;
+}
+.botao-esquerdo img, .botao-direito img{
+    filter: invert(100%);
+}
+.botoes button{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 80px;
+    height: 80px;
+    width: 80px;
+    border: none;
+}
+.frase{
+    height: 100vh;
+    background-color: rgba(109, 151, 94, 0.7);
+    width: 34vw;
+    font-size: 75px;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 180px;
+    display: flex;
+    align-items: center;
+}
+#sobre{
+    grid-area: sobre;
+    background-color: #D0C397;
+}
+.anuncios{
+    grid-area: anuncios;
+    font-size: 25px;
+    background-color:#D0C397;
+}
+.subtitulo{
+    padding: 80px;
+    background-color: #D0C397;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 38px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
+#subtitulo1{
+    grid-area: subtitulo1;
+}
+.mapa{
+    margin-left: 165px;
+}
+.mapa iframe{
+    width: 60vw;
+    height: 60vh;
+}
+.textoPrincipal{
+    margin: 22px 0;
+    width: 60vw;
+    font-weight: bold;
+    font-size: 19px;
+    color: #059454;
+    margin-left: 165px;
+}
+.label{
+    width: 60vw;
+    margin-left: 165px;
+    background-color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+}
+.checklist{
+    padding-left: 40px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60vh;
+}
+#subtitulo2{
+    grid-area: subtitulo2;
+    background-color: #FEFEFE;
+}
+#restaurante{
+    grid-area: restaurante;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    column-gap: 70px;
+}
+.img-restaurante{
+    position: relative;
+    width: 50%;
+    height: 80vh;
+    overflow: hidden;
+}
+.carrossel-restaurante{
+    transition: 0.5s;
+    position: absolute;
+    height: 90vh;
+    width: 100%;
+    top: 0;
+    
+}
+.frase-restaurante{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 30%;
+    color: #059454;
+    font-size: 80px;
+}
+#subtitulo3{
+    grid-area: subtitulo3;
+    background-color: #D0C397;
+}
+#bangalos{
+    display: flex;
+    align-items: center;
+    background-color: #D0C397;
+    grid-area: bangalos;
+    padding-bottom: 40px;
+    padding-left: 100px;
+}
+.img-bangalos{
+    box-sizing: border-box;
+    width: 60%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.carrossel-bangalos{
+    transition: 0.5s;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+.informacao-bangalos{
+    height: 100%;
+    width: 40%;
+}
+.simbolo-wifi{
+    height: 20px;
+}
+.material-symbols-outlined{
+    font-size: 55px;
+}
+.informacao-bangalos ul{
+    padding-left: 40px;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 30px;
+    flex-direction: column;
+}
+.texto-bangalos{
+    padding-bottom: 50px;
+    background-color: #D0C397;
+    grid-area: textobangalo;
+    font-size: 19px;
+    padding-left: 100px;
+}
+.texto-bangalos p {
+    color: #059454;
+    font-weight: bold;
+    width: 60%;
+}
+.destaque{
+    padding: 40px 0;
+}
+.rodape{
+    grid-area: rodape;
+    background-color: #D0C397;
+    padding-bottom: 40px;
+
+}
+.rodape div{
+    background-color: #eb489f;
+    width: 50%;
+    margin: 0 auto;
+    padding: 15px;
+}
+.rodape div :first-child{
+    font-size: 38px;
+    text-align: center;
+}
+.rodape div :not(:first-child){
+    margin-bottom: 15px;
+    font-size: 25px;
+    font-weight: bold;
+}
+#logo-whatsapp-contato{
+    position: relative;
+    padding: 0;
+    margin-left: 55px;
+    text-decoration: none;
+    color: #415c50;
+}
+#logo-whatsapp-contato span{
+    padding: 0;
+    font-size: 10px;
+    position:absolute;
+    top: 38px;
+    left: 0px;
+}
+.whatsapp-icon-rodape{
+    height: 30px;
+    background-color: #415c50;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+.cabecalhoScrolado{
+    background-color: #d0c397;
+}
+.icones-menu{
+    filter: invert(100%);
+    height: 30px;
+}
+.linksMenu{
+    display: none;
+}

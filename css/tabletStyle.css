@@ -1,0 +1,225 @@
+@media(max-width : 1180px){
+    .pagina{
+        grid-template-columns: 100vw;
+        grid-template-rows: 512px 130px 600px 106px 130px 600px 130px 100px 550px;
+        grid-template-areas: 
+        'inicio'
+        'subtitulo1'
+        'sobre'
+        'anuncios'
+        'subtitulo2'
+        'restaurante'
+        'subtitulo3'
+        'textobangalo'
+        'bangalos'
+        'rodape';
+    }
+    #inicio{
+        background-size: cover no-repeat;
+    }
+    .cabecalho{
+        height: 80px;
+    }
+    .socialMedia{
+        left: 30px;
+        padding-top: 90px;
+    }
+    .socialMedia li{
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+    .menu-cell{
+        border: 0;
+        padding: 5px;
+        background-color: rgb(109, 151, 94);
+        border-radius: 5px;
+        font-size: 30px;
+        margin: auto 0;
+        margin-right: 15px;
+        display: block;
+    }
+    .menu-cell:hover{
+        cursor: pointer;
+    }
+    .logo{
+        margin-left: 20px;
+        height: 100%;
+    }
+    .frase{
+        font-size: 60px;
+        height: 512px;
+        width: 345px;
+    }
+    .menu-pc{
+        display: none;
+    }
+    .botoes{
+        width: 100%;
+        padding: 0 15px;
+        top: calc(50% - 20px);
+    }
+    .botoes button{
+        height: 40px;
+        width: 40px;
+    }
+    .botoes img{
+        height: 100%;
+        width: 100%;
+    }
+    .botao-esquerdo img{
+        margin-left: 12px;
+    }
+    .botao-esquerdo{
+        padding-left: 0px ;
+    }
+
+    .checklist{
+        padding: 0 5px;
+        margin: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        font-size: 15px;
+    }
+    .subtitulo{
+        padding: 50px;
+        font-size: 30px;
+    }
+    .mapa{
+        width: 70vw;
+        height: 450px;
+        margin: 0 auto;
+
+    }
+    .mapa iframe{
+        height: 100%;
+        width: 100%;
+    }
+    .textoPrincipal{
+        text-align: center;
+        width: 60%;
+        padding-bottom: 60px;
+        margin: 26px auto;
+    }
+    .label{
+        width: 60%;
+        margin: 0 auto;
+    }
+    #restaurante{
+        overflow: hidden;
+        display: block;
+        margin: 0 auto;
+        height: 100%;
+        width: 100vw;
+    }
+    .frase-restaurante{
+        justify-content: center;
+        height: auto;
+        padding-top: 50px;
+        width: 100%;
+        font-size: 45px;
+    }
+    .img-restaurante{
+        background-size: cover;
+        height: 350px;
+        width: 60vw;
+        background-position: center;
+        margin: 0 auto;
+        margin-bottom: 25px;
+        overflow: hidden;
+    }
+    .carrossel-restaurante , .carrossel-bangalos{
+        border-radius: 35px;
+        height: 100%;
+    }
+
+    #bangalos{
+        overflow: hidden;
+        padding: 0;
+        flex-direction: column;
+        row-gap: 36px;
+    }
+    .texto-bangalos{
+        display: flex;
+        align-items: center;
+        padding: 0 80px;
+        text-align: center;
+        padding-bottom: 26px;
+    }
+    .texto-bangalos p{
+        width: 100%;
+    }
+    .img-bangalos{
+        overflow: hidden;
+        height: 400px;
+        width: 80%;
+    }
+    .informacao-bangalos{
+        width: 100%;
+        height: 100px;
+        padding: 0 35px;
+    }
+    .informacao-bangalos ul{
+        column-gap: 5px;
+        padding: 0;
+        flex-direction: row;
+        flex-wrap:wrap;
+        justify-content: space-evenly;
+        font-size: 20px;
+        width: 100%;
+    }
+    .rodape div{
+        width: 70%;
+    }
+    @keyframes abrindoMenu{
+        from{
+            height: 0;
+        }
+        to{
+            height: 250px;
+        }
+    }
+    @keyframes fechandoMenu {
+        from{
+            height: 250px;
+        }
+        to{
+            height: 0;
+        }
+    }
+    .menuAberto , .menuFechado{
+        background-color: black;
+        z-index: 1;
+        overflow: hidden;
+        top: 80px;
+        width: 200px;
+        right: 15px;
+        position: fixed;
+        animation-duration: 0.4s;
+        animation-fill-mode: forwards;
+    }
+    .menuAberto{
+        animation-name: abrindoMenu;
+    }
+    .menuFechado{
+        animation-name: fechandoMenu;
+    }
+    .linksMenu{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+    .linksMenu a{
+        display: flex;
+        column-gap: 10px;
+        padding: 15px 0;
+        font-size: 20px;
+        text-decoration: none;
+        color: #fefefe;
+        height: 50px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+}
